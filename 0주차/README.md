@@ -23,6 +23,49 @@
 - 하지만 라이브러리치고는 규모도 클 뿐만 아니라, 반드시 지켜야 하는 규약도 굉장히 많습니다. (위키피디아에서는 프레임워크라고 규정해놨습니다.)
 - 이 부분에 대해서는 [이 사이트](https://kruschecompany.com/react-framework-library/) 를 한번 참고하셔도 좋을 것 같습니다.
 
+## JavaScript란?
+- 웹 페이지를 더 **동적**으로 만들어주는 프로그래밍 언어입니다.
+- 스크립트 (script) 언어이기 때문에 배우기 매우 쉬운편에 속하지만, 난잡하다는 느낌이 들때가 있습니다.
+
+## 실습 진행
+### Installation
+- `node.js` : 스크립트 언어인 JavaScript를 백앤드(서버)로 사용할 수 있게 만든 기술 
+  - `npm`(node package module) : Node.js 기반으로 만들어진 패키지들을 인터넷을 이용하여 손쉽게 다운로드 할 수 있습니다.
+  - Installation : [Node.org](https://nodejs.org) 공식사이트에서 다운로드 
+    - 짝수 버젼 : 안정적, 신뢰도 높음 (LTS -> Long Term Support)
+    - 홀수 버젼 : 최신기능
+- React : React 공식 홈페이지(https://ko.reactjs.org/docs/create-a-new-react-app.html)의 설명에 따라 설치
+  - `CRA` (Create React App) : 부분적으로 React를 적용하는 것이 아닌 모든 웹페이지를 React로 만들고 싶다면, CRA를 이용하는 것이 좋습니다.
+- `git` : 프로그래밍 버젼 관리 툴입니다. 
+- `github` : git의 원격저장소 입니다. 가장 많이 쓰이는 원격저장소 입니다.
+
+### CRA 실행
+- `npm start` 로 실행
+- 기타 명령어
+
+
+### CRA 구조 설명
+```
+my-app/
+  README.md     # 해당 웹 어플리케이션과 관련한 Readme 
+  node_modules/ # npm으로 설치한 모든 파일들이 들어감, git으로 보통 공유하지 않기 때문에 .gitignore에 등록함
+  package.json  # npm으로 설치한 모든 파일들이 명시되어 있는 곳. 어떤 것들을 npm으로 설치했는지 알 수 있음
+  public/       # 공유 폴더. 상대 경로를 이용하지 않고 접근할 수 있음 -> CRA를 쓰는 가장 큰 이유중 하나
+    index.html  # Root Html 파일. 결국 이 HTML 파일에 모든 것을 그려냄
+    favicon.ico # Root image 파일. 다양한 기능을 할 수 있습니다.
+  src/ # React 코드들(JSX)이 들어오는 공간 
+    App.css    
+    App.js  
+    App.test.js
+    index.css
+    index.js
+    logo.svg
+```
+## 찾아볼만한 키워드
+- MVC Pattern : React는 MVC모델에서 View에 최적화되어 있습니다.
+- SPA : React는 SPA를 이용하여 구현되었습니다.
+- Library VS FrameWork : 각각 무엇인지, **차이점**이 무엇인지 알아보는 것은 웹 개발의 전반적인 지식을 습득하는데 도움이 됩니다.
+
 ### Single Page Application (SPA)
 > 키워드를 찾아 정리하는 예시입니다.
 - 서버로부터 *완전한 새로운 페이지를 불러오지 않고*,  현재의 페이지 중 **일부만 동적으로 다시 작성함**으로써 사용자와 소통하는 웹 어플리케이션이나 웹사이트
@@ -31,7 +74,7 @@
 
 ---
 
-### 기존의 WEB 방식과의 차이점
+#### 기존의 WEB 방식과의 차이점
 
 - link tag를 사용하는 **전통적인 WEB 방식**
     1. 새로운 페이지 요청 시마다 정적 리소스가 다운로드
@@ -53,7 +96,7 @@
 
 ---
 
-### SPA의 단점
+#### SPA의 단점
 
 - **초기 구동 속도**
 
@@ -75,43 +118,6 @@
 
 - 더 자세한 SPA와 관련된 사항은 [이 사이트](https://poiemaweb.com/js-spa) 에서 확인 할 수 있습니다.
 ---
-
-## JavaScript란?
-- 웹 페이지를 더 **동적**으로 만들어주는 프로그래밍 언어입니다.
-- 스크립트 (script) 언어이기 때문에 배우기 매우 쉬운편에 속하지만, 난잡하다는 느낌이 들때가 있습니다.
-
-## 실습 진행
-### Installation
-- `node.js` : 스크립트 언어인 JavaScript를 백앤드(서버)로 사용할 수 있게 만든 기술 
-  - `npm`(node package module) : Node.js 기반으로 만들어진 패키지들을 인터넷을 이용하여 손쉽게 다운로드 할 수 있습니다.
-  - Installation : [Node.org](https://nodejs.org) 공식사이트에서 다운로드 
-    - 짝수 버젼 : 안정적, 신뢰도 높음 (LTS -> Long Term Support)
-    - 홀수 버젼 : 최신기능
-- React : React 공식 홈페이지(https://ko.reactjs.org/docs/create-a-new-react-app.html)의 설명에 따라 설치
-  - `CRA` (Create React App) : 부분적으로 React를 적용하는 것이 아닌 모든 웹페이지를 React로 만들고 싶다면, CRA를 이용하는 것이 좋습니다.
-
-### CRA 구조 설명
-```
-my-app/
-  README.md     # 해당 웹 어플리케이션과 관련한 Readme 
-  node_modules/ # npm으로 설치한 모든 파일들이 들어감, git으로 보통 공유하지 않기 때문에 .gitignore에 등록함
-  package.json  # npm으로 설치한 모든 파일들이 명시되어 있는 곳. 어떤 것들을 npm으로 설치했는지 알 수 있음
-  public/       # 공유 폴더. 상대 경로를 이용하지 않고 접근할 수 있음 -> CRA를 쓰는 가장 큰 이유중 하나
-    index.html  # Root Html 파일. 결국 이 HTML 파일에 모든 것을 그려냄
-    favicon.ico # Root image 파일. 다양한 기능을 할 수 있습니다.
-  src/ # React 코드들(JSX)이 들어오는 공간 
-    App.css    
-    App.js  
-    App.test.js
-    index.css
-    index.js
-    logo.svg
-```
-
-## 찾아볼만한 키워드
-- MVC Pattern : React는 MVC모델에서 View에 최적화되어 있습니다.
-- SPA : React는 SPA를 이용하여 구현되었습니다.
-- Library VS FrameWork : 각각 무엇인지, **차이점**이 무엇인지 알아보는 것은 웹 개발의 전반적인 지식을 습득하는데 도움이 됩니다.
 
 ## 유용한 참고 (공식) 사이트
 - https://reactjs.org/   
