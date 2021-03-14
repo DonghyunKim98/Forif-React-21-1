@@ -30,7 +30,7 @@
 
 ## 실습 진행
 ### Installation
-- `node.js` : 스크립트 언어인 JavaScript를 백앤드(서버)로 사용할 수 있게 만든 기술 
+- **`node.js`** : 스크립트 언어인 JavaScript를 백앤드(서버)로 사용할 수 있게 만든 기술 
   - `npm`(node package module) : Node.js 기반으로 만들어진 패키지들을 인터넷을 이용하여 손쉽게 다운로드 할 수 있습니다.
   - Installation : [Node.org](https://nodejs.org) 공식사이트에서 다운로드 
     - 짝수 버젼 : 안정적, 신뢰도 높음 (LTS -> Long Term Support)
@@ -41,16 +41,14 @@
   npm -v 
   ```
   > 터미널은 윈도우 기준 `window+ R` 을 클릭하여 나오는 창에 `cmd`를 입력하면 확인할 수 있습니다.
-- Vscode : 가장 유명한 Text Editor입니다. MicroSoft에서 만들었으며, 사용자수와 extension면에서 다른 text editor가 따라잡지 못하는 수준입니다.   
+- **Vscode** : 가장 유명한 Text Editor입니다. MicroSoft에서 만들었으며, 사용자수와 extension면에서 다른 text editor가 따라잡지 못하는 수준입니다.   
 [공식 사이트]()에서 OS에 맞는 버젼을 다운 받아주시기 바랍니다.
-- React : [React 공식 홈페이지](https://ko.reactjs.org/docs/create-a-new-react-app.html)의 설명에 따라 설치
-  - `CRA` (Create React App) : 부분적으로 React를 적용하는 것이 아닌 모든 웹페이지를 React로 만들고 싶다면, CRA를 이용하는 것이 좋습니다.
-- `git` : 프로그래밍 버젼 관리 툴입니다. git에 대해선 포리프에서 추가적인 스터디가 제공될 예정입니다.   
+- **`git`** : 프로그래밍 버젼 관리 툴입니다. git에 대해선 포리프에서 추가적인 스터디가 제공될 예정입니다.   
   [공식 사이트](https://git-scm.com/downloads)에서 OS에 맞는 버젼을 다운로드 하시기 바랍니다. 설치 이후 터미널에 아래 명령어를 입력하여 설치가 완료되었는지 확인합니다. 
   ```
   git --version
   ```
-- `github` : git의 원격저장소 입니다. 가장 많이 쓰이는 원격저장소 이며, 현재 micorsoft가 인수한 상태입니다.    
+- **`github`** : git의 원격저장소 입니다. 가장 많이 쓰이는 원격저장소 이며, 현재 micorsoft가 인수한 상태입니다.    
    [github](github.com)에 회원가입을 진행해주시기 바랍니다. 가급적 학교메일로 하길 권장드립니다. (무료로 pro로 업그레이드가 진행됩니다.)
 
 ### Settings `git`
@@ -64,7 +62,14 @@
 - vscode는 여러가지 extension을 깔면 실습하기 편해집니다.
  ![image](https://user-images.githubusercontent.com/60422588/111070698-2f0ba880-8516-11eb-8218-46fb051dda31.png)
 - 위의 이미지에 있는 버튼을 누르면 extension을 깔수 있는 곳으로 넘어갑니다
-- 아래 리스트에 있는 
+- 아래 목록의 항목들을 검색하여 설치해주시면 됩니다
+  1. ES7 React/Redux/GraphQL/React-Native snippets
+  2. Git History
+  3. HTML CSS Support
+  4. Live Server
+  5. Markdown Preview Enhanced
+  6. Visual Studio Intellicode
+  > Material Theme 등은 보통 개발자들이 많이 쓰는 커스터마이징 툴입니다. ~~쓰면 예뻐집니다.~~
 ### CRA 실행
 - 아무 폴더를 만들고 vscode로 열어줍니다
 - vscode에서 해당 폴더에 연결된 터미널을 직접적으로 열어주는 단축키(ctrl+`) 로 터미널을 열어줍니다.
