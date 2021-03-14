@@ -12,6 +12,7 @@
 
 ## React 소개
 - JavaScript **View** Library / FrameWork 
+  - View 를 담당하고 있다는 점은 매우 중요합니다. React를 학습한 이후 계속하여 언급할 예정입니다.
 - Most Popular & Used Library / FrameWork
 ![스크린샷 2021-03-12 오후 3 02 46](https://user-images.githubusercontent.com/60422588/110899235-164b9900-8344-11eb-83b0-67d0ac075bcd.png)
 - 스크린샷은 npm(node package module)에서 해당 페키지를 다운로드한 사람 숫자입니다. react가 다른 2개의 라이브러리/프레임워크에 비해 압도적인 다운로드를 보여주고 있습니다.
@@ -34,14 +35,44 @@
   - Installation : [Node.org](https://nodejs.org) 공식사이트에서 다운로드 
     - 짝수 버젼 : 안정적, 신뢰도 높음 (LTS -> Long Term Support)
     - 홀수 버젼 : 최신기능
-- React : React 공식 홈페이지(https://ko.reactjs.org/docs/create-a-new-react-app.html)의 설명에 따라 설치
+    - 짝수 버젼을 Install 할 것을 권합니다.
+  - 설치가 끝난 이후 터미널에 아래 명령어를 입력하여 설치가 완료되었는지 확인합니다
+  ```
+  npm -v 
+  ```
+  > 터미널은 윈도우 기준 `window+ R` 을 클릭하여 나오는 창에 `cmd`를 입력하면 확인할 수 있습니다.
+- Vscode : 가장 유명한 Text Editor입니다. MicroSoft에서 만들었으며, 사용자수와 extension면에서 다른 text editor가 따라잡지 못하는 수준입니다.   
+[공식 사이트]()에서 OS에 맞는 버젼을 다운 받아주시기 바랍니다.
+- React : [React 공식 홈페이지](https://ko.reactjs.org/docs/create-a-new-react-app.html)의 설명에 따라 설치
   - `CRA` (Create React App) : 부분적으로 React를 적용하는 것이 아닌 모든 웹페이지를 React로 만들고 싶다면, CRA를 이용하는 것이 좋습니다.
-- `git` : 프로그래밍 버젼 관리 툴입니다. 
-- `github` : git의 원격저장소 입니다. 가장 많이 쓰이는 원격저장소 입니다.
+- `git` : 프로그래밍 버젼 관리 툴입니다. git에 대해선 포리프에서 추가적인 스터디가 제공될 예정입니다.   
+  [공식 사이트](https://git-scm.com/downloads)에서 OS에 맞는 버젼을 다운로드 하시기 바랍니다. 설치 이후 터미널에 아래 명령어를 입력하여 설치가 완료되었는지 확인합니다. 
+  ```
+  git --version
+  ```
+- `github` : git의 원격저장소 입니다. 가장 많이 쓰이는 원격저장소 이며, 현재 micorsoft가 인수한 상태입니다.    
+   [github](github.com)에 회원가입을 진행해주시기 바랍니다. 가급적 학교메일로 하길 권장드립니다. (무료로 pro로 업그레이드가 진행됩니다.)
 
+### Settings `git`
+- `git` 의 경우 초기 세팅이 필요합니다. 아래 명령어를 터미널에 입력하시기 바랍니다. 이때 `userName`은 어떤 것으로 해도 상관이 없으나 `user.email`은 반드시 **깃헙에 가입한 메일로 진행**해주시기 바랍니다
+```
+  git config user.email "akainoo@hanyang.ac.kr"
+  git config user.name "DongHyunKim"
+```
+
+### Settings `vscode`
+- vscode는 여러가지 extension을 깔면 실습하기 편해집니다.
+ ![image](https://user-images.githubusercontent.com/60422588/111070698-2f0ba880-8516-11eb-8218-46fb051dda31.png)
+- 위의 이미지에 있는 버튼을 누르면 extension을 깔수 있는 곳으로 넘어갑니다
+- 아래 리스트에 있는 
 ### CRA 실행
-- `npm start` 로 실행
-- 기타 명령어
+- 아무 폴더를 만들고 vscode로 열어줍니다
+- vscode에서 해당 폴더에 연결된 터미널을 직접적으로 열어주는 단축키(ctrl+`) 로 터미널을 열어줍니다.
+- CRA를 npm을 이용해서 다운로드 받습니다. [공식 사이트](https://ko.reactjs.org/docs/create-a-new-react-app.html#create-react-app)를 보시면서 진행하시면 됩니다.
+  - `cd`는 change directory의 약자로, text를 입력하면 text와 일치하는 하위 폴더로 이동을 하고, `..`을 입력하면 상위폴더로 이동을 합니다.
+- 이후 해당 터미널에서 `npm start`를 입력하시면 CRA가 실행이 됩니다.
+- 아래와 같은 화면이 출력이 된다면 성공입니다!
+![image](https://user-images.githubusercontent.com/60422588/111070900-236cb180-8517-11eb-8d90-9e047f34fd95.png)
 
 
 ### CRA 구조 설명
@@ -61,10 +92,19 @@ my-app/
     index.js
     logo.svg
 ```
+## 앞으로의 전반적인 계획
+- 1주차~4주차 => `HTML` `CSS` `JavaScript` 에서 중요한 부분을 집중적으로 학습합니다.
+  - 그 중에서도 `JavaScript`를 , 그 중에서도 DOM을 다루는 방법을 가장 집중적으로 다룰 예정입니다.
+  - `JavaScript` 관련 문법 사항은 간략하게, 또는 관련 강의 링크를 제공해드릴 예정입니다.
+- 5주차~8주차or10주 => React를 학습합니다
+  - 2017년 이후 업데이트 된 [Hook](https://ko.reactjs.org/docs/hooks-intro.html)을 집중적으로 학습합니다.
+  - 기회가 된다면 파이어베이스 등을 이용한 Serverless도 학습할 계획입니다.
+
 ## 찾아볼만한 키워드
 - MVC Pattern : React는 MVC모델에서 View에 최적화되어 있습니다.
 - SPA : React는 SPA를 이용하여 구현되었습니다.
 - Library VS FrameWork : 각각 무엇인지, **차이점**이 무엇인지 알아보는 것은 웹 개발의 전반적인 지식을 습득하는데 도움이 됩니다.
+> 이번주는 github 과 git 을 이용하여 과제 업로드 방식을 설명하기 너무 방대하므로 다음주로 넘기겠습니다.
 
 ### Single Page Application (SPA)
 > 키워드를 찾아 정리하는 예시입니다.
@@ -132,3 +172,6 @@ CRA (Create React App) 공식 사이트. CRA로 사이트를 만들때 세밀한
 - https://developer.mozilla.org   
 웹 개발을 위한 공식 사이트. 파이어폭스(웹 브라우저) MDN 제단에서 운영중인 사이트입니다.   
 HTML , CSS , JavaScript 관련 공식 사항은 이 사이트에서 찾기를 권합니다.
+- https://www.youtube.com/channel/UC_4u-bXaba7yrRz_6x6kb_w   
+제가 개인적으로 웹 개발 공부를 할 때 가장 많은 도움을 받은 사이트입니다.   
+JavaScript 관련 문법이 이해가 안된다면, 채널에 있는 JavaScript 무료 강의를 참고해도 좋을듯 합니다.
