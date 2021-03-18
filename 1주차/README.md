@@ -230,6 +230,8 @@ button.getElementbyID("click",()=>{
     3. JavaScript DOM manipulation 과 EventListener를 사용하여 button이 클릭되었을때, text안에 있는 내용이 본문 박스안에서 폰트 적용되어 보여지게 함 (필수)
     4. `button` 클릭시 `text`를 입력하는 창이 자동적으로 비어짐 (선택)
     5. text에 입력된 사항을 실시간으로 반영 (선택 → hint  Keyword : `onChange` )
+- 아마도 발생할 가능성이 높은 오류들 -> 구글링을 해봐서 알아보세요! 키워드들을 제공해드립니다.
+    1. button이 눌렀을때 웹페이지가 **새로고침 (refresh)** 되는 현상
 -----
 
 ### 선택 과제
