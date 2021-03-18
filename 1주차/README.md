@@ -223,7 +223,7 @@ button.getElementbyID("click",()=>{
 
 ### 필수 과제
 
-- 주어진 `start.html` , `App.js` , `style.css` 로 부터 [구글 폰트 사이트](https://fonts.google.com/) 를 클론 코딩합니다.
+- 주어진 `index01-start.html` , `App.js` , `style.css` 로 부터 [구글 폰트 사이트](https://fonts.google.com/) 를 클론 코딩합니다.
 - 구현 사항
     1. HTML `form` 을 이용하여 `text` 를 입력하는 창과 클릭할 수 있는 `button` 생성 (필수)
     2. CSS `flex` 를 이용하여 8개 이상의 폰트를 가진 각각 다른 박스 배치 (필수)
