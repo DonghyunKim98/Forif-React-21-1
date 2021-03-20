@@ -1,0 +1,29 @@
+.font {
+    font-size: 100px;
+    font-family: 'Chango', cursive;
+}
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+    background-color: blue;
+}
+
+.item {
+    background-color: black;
+    border: 1px solid gray;
+    width: 100px;
+    margin : 10px;
+    flex-shrink: 100px;
+    flex-basis: 200px;
+    flex-grow: 300px;
+}
+
+.content {
+    width: 100px;
+    height: 20px;
+    background-color: skyblue;
+}
