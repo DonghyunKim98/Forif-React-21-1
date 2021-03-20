@@ -2,7 +2,9 @@
 
 ## 📣 공지사항
 
-1. JavaScript 의 경우 DOM 관련된 부분만 스터디에서 강의합니다.  문법 같은 경우는 [https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2) 코스를 참고해주시면 되겠습니다.
+1. JavaScript 의 경우 DOM 관련된 부분만 스터디에서 강의합니다.   
+문법 같은 경우는 해당 스터디에서 진행하는 실습 파일에 주석으로 올려드리는 것을 참고하셔야 합니다.    
+또는 [https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2](https://www.youtube.com/watch?v=wcsVjmHrUQg&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2) 코스를 참고해주시면 되겠습니다. 제가 처음 JavaScript를 공부했던 유튜브였습니다.
 2. 0주차 과제는 제출하지 않습니다. 이번주 과제부터 제출합니다.
 3. 이번 과제에서 다음 스터디에서 배울 내용이 일부분 포함 되어 있습니다. 언급 해드릴테니, 해당 부분은 깊게 이해 하시지 않아도 괜찮습니다.
 
@@ -21,7 +23,7 @@
     - `action` : 데이터를 보낼 **URL**
     - `method` : 어떤 **HTTP 방식**을 사용할 것인지 ( GET , POST 등의 REST API)
 - 주요 *JS method*
-    - `**reset()**` : form 에 들어간 모든 사용자 입력을 깨끗이 원래 상태로 되돌림
+    - **`reset()`** : form 에 들어간 모든 사용자 입력을 깨끗이 원래 상태로 되돌림
 - form 에 자주 들어가는 HTML DOM
     - `textarea`  `input` `button` `select`
 - form 에 적용되는 이벤트
@@ -33,7 +35,7 @@
 
 ### `form` 의 들어갈 수 있는 DOM 1번 : `textarea`
 
-[- HTML: Hypertext Markup Language | MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/textarea)
+- [HTML: Hypertext Markup Language | MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/textarea)
 
 - 멀티라인 일반 텍스트 편집 컨트롤을 나타냄
 - 즉 여러줄의 긴 문장을 입력할 수 있다
@@ -73,7 +75,7 @@
     1. `disabled` : 활성화 여부
     2. `name` : 버튼 안에 들어갈 text
 - 주요 *JS method*
-    1. `**onClick`** : 버튼을 클릭했을 때 호출
+    1. **`onClick`** : 버튼을 클릭했을 때 호출
 
 ---
 
@@ -83,7 +85,7 @@
 - 다양한 선택지를 주고 하나를 고르는 DOM
 - 하위 DOM 으로 `<option>` 을 가지고 있음
 - 주요 JS method
-    1. `**onChange**` : select의 요소가 바뀔 때 호출
+    1. **`onChange`** : select의 요소가 바뀔 때 호출
 
 ---
 
@@ -122,21 +124,32 @@
 > 자세한 사항들은 링크된 사이트를 참고하시면 됩니다.
 
 ---
+## JavaScript - 기본적인 아이디어
+- 우리는 JS로 웹페이지에 있는 DOM을 조작하고 싶은 것이 목표입니다.
+- 그렇다면 기본적으로 따라가야 할 논리가 어떻게 될까요?
+- 제일 먼저 웹페이지 상에 있는 **DOM을 JS를 이용하여 가져오는 것**이 가장 먼저입니다. 그렇게 해야 JS로 DOM을 조작할 수 있을 거니깐요.  
+	- 이 과정을 **DOM Traversal** 이라고 합니다.
+- 그 이후엔 어떻게 할까요? DOM을 코드 상으로 조작을 해야할 겁니다. 가령 *style*의 *backgroudColor*를 black으로 바꾼다라던지, DOM의 택스트를 다른 것으로 바꾼다라던지.
+	- 이 과정을 **DOM Manipulation** 이라고 합니다.
+- 이렇게 되면 끝일까요? 아니요! 우리는 사용자에 의해 DOM이 조작되고 싶습니다. 즉 _사용자 입력_ 등에 반응하고 싶은거죠. 
+	- 이 과정을 **Event Handling** 이라고 말합니다.
 
+- 위의 3가지 과정을 적절히 언제 사용해야 하는지 먼저 생각하고 코드를 짜기 바랍니다.
 ## JavaScript - DOM Traversal
 
 - [https://www.youtube.com/watch?v=v7rSSy8CaYE&t=625s](https://www.youtube.com/watch?v=v7rSSy8CaYE&t=625s)
 - JavaScript 에서 HTML DOM요소에 탐색하는 방법을 정리 한 것입니다.
     - DOM에 접근을 해야 JavaScript로 해당 DOM요소를 control 하기 때문입니다.
+    - 또한 아래의 3가지 방식으로 접근한 DOM은 모두 주소값을 가져옵니다. 다른 말로 JS를 통해 조작을 하면 **live**하게 바뀐다는 점입니다. (call by reference의 개념)
 
-### 1. `document.getElementbyId(*id*)`
+### 1. `document.getElementbyId(`*`id`*`)`
 
 - [https://developer.mozilla.org/ko/docs/Web/API/Document/getElementById](https://developer.mozilla.org/ko/docs/Web/API/Document/getElementById)
 - DOM 에 부여한 `id` 요소를 가지고 탐색합니다.
     - `id` 는 필연적으로 해당 Web page 에서 unique하게 DOM에 부여되므로 반환되는 결과값은 **DOM 요소 1개**입니다. (정확히는 `Element` 객체 1개를 반환)
 - 가장 많이 사용됐던 Traversal 입니다. (기본적으로 `id` 값은 자바스크립트를 위해 설정한다고 배웠을겁니다.)
 
-### 2. `document.getElementsByClassName(*className*)`
+### 2. `document.getElementsByClassName(`*`className`*`)`
 
 - [https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
 - DOM에 부여한 `class` 요소를 가지고 탐색합니다
@@ -170,8 +183,6 @@
         - 따라서 굳이 `Array.from()` 를 이용해서 진짜 배열로 변환하는 수고로움을 덜 수 있습니다.
 
 ## JavaScript - DOM manipulation
-
-
 > 다다음주에 본격적으로 다룰 예정입니다. 과제에서 사용할 부분만 간략하게 알려드립니다.
 
 ### 1. DOM의 property 가져오기
@@ -192,8 +203,6 @@ console.log(title.textContent) // Hello World!
 - 구글링을 통해 가져오고 싶은 내용이 무엇인지를 검색한다면 (ex : *how to get value of DOM?*) 가져오는 방법을 알 수 있습니다. (워낙 많기에 여기선 일단 생략합니다.)
 
 ## JavaScript - EventListener
-
-
 > 다음주에 본격적으로 다룰 예정입니다. 과제에서 사용할 부분만 간략하게 알려드립니다.
 
 ### 1. `EventTarget.addEventListener()`
@@ -238,7 +247,7 @@ button.getElementbyID("click",()=>{
 
 - JavaScript 배열의 method (모든 걸 다 알 필요는 없지만, 자주 사용되는 것들은 알아두면 좋습니다.)
 - CSS `grid`
-- `EventListener` 를 설명하는 과정에서 **비동기적 (*asynchronous*)** 이라는 표현과 콜백함수(**callback function**)을 사용했습니다. JavaScript는 비동기적 처리를 지원하는 언어입니다. 이것이 무엇인지를 찾아보는 것은 자바스크립트를 이해하는데 굉장한 도움이 됩니다. 또한 콜백함수는 자바스크립트의 핵심중 하나입니다.
+- `EventListener` 를 설명하는 과정에서 **비동기적 (*asynchronous*)** 이라는 표현과 **콜백함수(callback function)**  사용했습니다. JavaScript는 비동기적 처리를 지원하는 언어입니다. 이것이 무엇인지를 찾아보는 것은 자바스크립트를 이해하는데 굉장한 도움이 됩니다. 또한 콜백함수는 자바스크립트의 핵심중 하나입니다.
 ----
 ### 과제 제출 방식
 - 먼저 첫주차라서 해야할 것이 있습니다. vscode로 들어가 적당한 폴더를 잡고 해당 폴더가 잡혀있는 터미널을 엽니다 (윈도우 기준 ctrl + `)
