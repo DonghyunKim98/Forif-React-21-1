@@ -223,7 +223,7 @@ const button = document.getElementByID("click");
 // 해당 DOM에 event를 붙여줍니다.
 // 첫번째 인자 -> 어떤 event type인지?
 // 두번째 인자 -> 해당 event가 발생하면 어떤 함수를 발생시킬 것인지? (콜백함수)
-button.getElementbyID("click",()=>{
+button.addEventListener("click",()=>{
 	console.log("눌려졌다!!);
 });
 ```
