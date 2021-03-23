@@ -162,7 +162,6 @@
 
 - 보통 같은 `class`로 묶인 DOM 들은 CSS 를 공유하는 경우가 많습니다. 따라서 이번 Traversal 은 **JavaScript 상에서 DOM 의 style 을 조작**하기 위해 쓰이는 경우가 많습니다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e70bef1-e7f5-4c72-b913-32348c085699/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e70bef1-e7f5-4c72-b913-32348c085699/Untitled.png)
 
 ### 3. `Document.querySelector()` , `Document.querySelectorAll()`
 
