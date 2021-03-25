@@ -12,10 +12,12 @@
 - 1주차
   - HTML : `form` 알아보기
   - CSS : `flex` 알아보기
-  - JavaScript : DOM 을 컨트롤 하는 방법 알아보기
-  - JavaScript : `Event` 및 `EventListener` 알아보기
-  - 필수 과제 : Drum & Piano Kit 만들기
+  - JavaScript : DOM TravelSal
+  - 필수 과제 : 구글 폰트 사이트 클론 코딩
+  - 선택 과제 : JS 배열 메소드, CSS grid, asynchrounous , callback function
 - 2주차 -> 업데이트 예정
+  - JavaScript : `Event` 및 `EventListener` 알아보기
+  - 필수 과제: 다양한 Kit
 
 ## 스터디 방식
 1. 각 주차별 Readme.md에 써져 있는 순서대로 이론 설명 및 실습 진행합니다.
@@ -31,5 +33,5 @@
 -----
 ## 각 주차별 링크
 - 0주차 : https://github.com/DonghyunKim98/Forif-React-21-1/blob/main/0%EC%A3%BC%EC%B0%A8/README.md
-- 1주차 :
-- 2주차 :
+- 1주차 : https://github.com/DonghyunKim98/Forif-React-21-1/tree/main/1%EC%A3%BC%EC%B0%A8
+- 2주차 : 
