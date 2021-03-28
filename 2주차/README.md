@@ -114,13 +114,9 @@
 - `Element`, `document`, `window` 등이 가장 대표적인 EventTarget
     - 모든 DOM은 기본적으로 EventTarget. HTML 에서 사용되는 DOM은 EventTarget에서 상속받기 시작해서 속성들을 확장해 나감.
     - 위의 서술이 이해 안 되도 괜찮습니다! 다다음주에 객체 지향에대해서 배울 거에요 🙂
-- 최종적으로 상속받는 다이어그램은 다음과 같다.
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c19d0709-1f2a-4371-91f5-8c0c0760340f/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c19d0709-1f2a-4371-91f5-8c0c0760340f/Untitled.png)
-
 ---
 
-### 2**. EventListener 등록**
+### 2. EventListener 등록
 
 ### 2-1 . `EventTarget.addEventListener()`
 
