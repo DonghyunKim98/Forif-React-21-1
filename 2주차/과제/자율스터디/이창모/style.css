@@ -1,6 +1,5 @@
 html {
   font-size: 10px;
-  background: url('./background.jpg') bottom center;
   background-size: cover;
 }
 
@@ -8,6 +7,18 @@ body,html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.sound-selector-wrapper{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.sound-selector{
+  width: 300px;
+  font-size: 20px;
+  padding: 5px 0 5px 0;
 }
 
 .keys {
