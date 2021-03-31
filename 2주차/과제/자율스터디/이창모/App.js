@@ -15,13 +15,13 @@ instrumentSelect.addEventListener("change", (event) => {
 
     if (event.target.value == "piano") {
         document.body.style.backgroundImage = "url('./images/piano_background.jpg')"
-        pianoSound.forEach(function (element, index, array) {
+        pianoSound.forEach((element, index, array) => {
             spanSound[index].textContent = element
         })
     }
     else if (event.target.value == "drum") {
         document.body.style.backgroundImage = "url('./images/drum_background.jpg')"
-        drumSound.forEach(function (element, index, array) {
+        drumSound.forEach((element, index, array) => {
             spanSound[index].textContent = element
         })
     }
@@ -61,15 +61,25 @@ document.querySelectorAll(".key").forEach(item => {
 
 
 //타이핑 시 애니메이션 + 소리 효과
-document.addEventListener('keydown', function (e) {
-    const keyCode = e.keyCode;
+document.addEventListener('keydown', (e) => {
+    let keyCode
+    if (e.key !== undefined) {
+        keyCode = e.key;
+    } else if (e.keyIdentifier !== undefined) {
+        keyCode = e.keyIdentifier;
+    } else if (e.keyCode !== undefined) {
+        keyCode = e.keyCode;
+    }
+    //const keyCode = e.keyCode; // keyCode는 곧 사라진다고 하여.
+    console.log(keyCode)
+
     const aa = instrumentSelect.options[instrumentSelect.selectedIndex].value  //악기 종류
     const bb = String.fromCharCode(keyCode) //알파벳 종류
     if (bb == "A" || bb == "S" || bb == "D" || bb == "F" || bb == "G" ||
         bb == "H" || bb == "J" || bb == "K" || bb == "L") {
         try {//애니메이션
             let arr = Array.from(document.querySelectorAll(".key"))
-            arr.forEach(function (element, index) {
+            arr.forEach()((element, index) => {
                 if (element.children[0].textContent == bb) {
                     e.preventDefault
                     arr[index].classList.remove("key")
