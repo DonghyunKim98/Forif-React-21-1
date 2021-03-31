@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="intro_bg">
+    <div class="custom-select-wrapper">
+      <div class="custom-select">
+          <div class="custom-select__trigger"><span>드럼</span>
+              <div class="arrow"></div>
+          </div>
+          <div class="custom-options">
+              <span class="custom-option selected">드럼</span>
+              <span class="custom-option">피아노</span>
+              <span class="custom-option">sin파...</span>
+          </div>
+      </div>
+    </div>
+  
+    <div class="keys">
+      <div id="A" class="key">
+        <div class="keyType">A</div>
+        <span class="sound">clap</span>
+      </div>
+      <div id="S" class="key">
+        <div class="keyType">S</div>
+        <span class="sound">hihat</span>
+      </div>
+      <div id="D" class="key">
+        <div class="keyType">D</div>
+        <span class="sound">kick</span>
+      </div>
+      <div id="F" class="key">
+        <div class="keyType">F</div>
+        <span class="sound">openhat</span>
+      </div>
+      <div id="G" class="key">
+        <div class="keyType">G</div>
+        <span class="sound">boom</span>
+      </div>
+      <div id="H" class="key">
+        <div class="keyType">H</div>
+        <span class="sound">ride</span>
+      </div>
+      <div id="J" class="key">
+        <div class="keyType">J</div>
+        <span class="sound">snare</span>
+      </div>
+      <div id="K" class="key">
+        <div class="keyType">K</div>
+        <span class="sound">tom</span>
+      </div>
+      <div id="L" class="key">
+        <div class="keyType">L</div>
+        <span class="sound">tink</span>
+      </div>
+    </div>
+  </div>
+
+  <audio class="A" src="sounds/clap.wav"></audio>
+  <audio class="A" src="sounds/piano_c.mp3"></audio>
+  <audio class="A" src="sounds/oca_c.mp3"></audio>
+
+  <audio class="S" src="sounds/hihat.wav"></audio>
+  <audio class="S" src="sounds/piano_d.mp3"></audio>
+  <audio class="S" src="sounds/oca_d.mp3"></audio>
+ 
+  <audio class="D" src="sounds/kick.wav"></audio>
+  <audio class="D" src="sounds/piano_e.mp3"></audio>
+  <audio class="D" src="sounds/oca_e.mp3"></audio>
+
+  <audio class="F" src="sounds/openhat.wav"></audio>
+  <audio class="F" src="sounds/piano_f.mp3"></audio>
+  <audio class="F" src="sounds/oca_f.mp3"></audio>
+
+  <audio class="G" src="sounds/boom.wav"></audio>
+  <audio class="G" src="sounds/piano_g.mp3"></audio>
+  <audio class="G" src="sounds/oca_g.mp3"></audio>
+
+  <audio class="H" src="sounds/ride.wav"></audio>
+  <audio class="H" src="sounds/piano_a.mp3"></audio>
+  <audio class="H" src="sounds/oca_a.mp3"></audio>
+
+  <audio class="J" src="sounds/snare.wav"></audio>
+  <audio class="J" src="sounds/piano_b.mp3"></audio>
+  <audio class="J" src="sounds/oca_b.mp3"></audio>
+
+  <audio class="K" src="sounds/tom.wav"></audio>
+  <audio class="K" src="sounds/piano_ch.mp3"></audio>
+  <audio class="K" src="sounds/oca_ch.mp3"></audio>
+
+  <audio class="L" src="sounds/tink.wav"></audio>
+  <audio class="L" src="sounds/piano_d.mp3"></audio>
+  <audio class="L" src="sounds/oca_d.mp3"></audio>
+
+</body>
+<script src="App.js"></script>
+</html>
