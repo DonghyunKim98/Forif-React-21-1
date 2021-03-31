@@ -61,26 +61,25 @@ document.querySelectorAll(".key").forEach(item => {
 
 
 //타이핑 시 애니메이션 + 소리 효과
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keydown', e => {
     let keyCode
     if (e.key !== undefined) {
-        keyCode = e.key;
+        keyCode = e.key.toUpperCase()
     } else if (e.keyIdentifier !== undefined) {
-        keyCode = e.keyIdentifier;
+        keyCode = e.keyIdentifier.toUpperCase()
     } else if (e.keyCode !== undefined) {
-        keyCode = e.keyCode;
+        keyCode = String.fromCharCode(e.keyCode)
     }
-    //const keyCode = e.keyCode; // keyCode는 곧 사라진다고 하여.
-    console.log(keyCode)
+    //const keyCode = e.keyCode; // keyCode는 곧 사라진다고 함
 
     const aa = instrumentSelect.options[instrumentSelect.selectedIndex].value  //악기 종류
-    const bb = String.fromCharCode(keyCode) //알파벳 종류
-    if (bb == "A" || bb == "S" || bb == "D" || bb == "F" || bb == "G" ||
-        bb == "H" || bb == "J" || bb == "K" || bb == "L") {
+    //const bb = String.fromCharCode(keyCode) //알파벳 종류
+    if (keyCode == "A" || keyCode == "S" || keyCode == "D" || keyCode == "F" || keyCode == "G" ||
+        keyCode == "H" || keyCode == "J" || keyCode == "K" || keyCode == "L") {
         try {//애니메이션
             let arr = Array.from(document.querySelectorAll(".key"))
-            arr.forEach()((element, index) => {
-                if (element.children[0].textContent == bb) {
+            arr.forEach((element, index) => {
+                if (element.children[0].textContent == keyCode) {
                     e.preventDefault
                     arr[index].classList.remove("key")
                     void arr[index].offsetWidth
@@ -89,11 +88,11 @@ document.addEventListener('keydown', (e) => {
             })
 
             //소리
-            const object = document.getElementById(aa + "-sound" + bb)
+            const object = document.getElementById(aa + "-sound" + keyCode)
             const audio = new Audio(object.src)
             audio.play()
         } catch (e) {
-            console.log("none page would be")
+            console.log(e)
         }
 
     }
