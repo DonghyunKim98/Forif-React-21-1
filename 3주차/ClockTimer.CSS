@@ -1,0 +1,20 @@
+html {
+    font-family: 'helvetica neue';
+    text-align: center;
+}
+
+.content {
+    display: flex;
+}
+.clockContent{
+    flex: 1;
+    min-height: 100vh;
+}
+.timerContent{
+    flex: 1;
+    min-height: 100vh;
+}
+
+/* Clock related CSS */
+
+/* Timer related CSS*/

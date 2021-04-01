@@ -380,7 +380,7 @@ window.addEventListener('keydown', playSoundKeyDown);
 
 ### 필수 과제
 
-- 주어진 `index03-start.html` , `App.js` , `style.css` 로 부터 Clock & Timer 을 제작합니다.
+- 주어진 `index03.html` , `App.js` , `ClockTimer.css` 로 부터 Clock & Timer 을 제작합니다.
 - 구현 사항
     1. 좌측에는 대한민국 표준시에 맞게 원형 시계가 돌아갑니다 (필수)
     2. 좌상단에 다양한 도시를 선택할 수 있는 selector 창을 만들고, 해당 도시를 선택하면 시계가 변경됩니다. (에니메이션을 넣으면 더더욱 좋습니다) (선택)
