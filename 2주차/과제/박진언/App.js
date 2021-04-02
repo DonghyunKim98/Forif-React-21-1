@@ -11,16 +11,13 @@ let audios= document.querySelectorAll(".drum");
 
 function addAudiosToClick(){
     keys.forEach((keys_element)=>{
-
+        
         keys_element.addEventListener("click",()=>{
- 
-            audios.forEach((audios_element)=>{
+            
+            const filtered = Array.from(audios).filter(audio => audio.getAttribute('value')===keys_element.getAttribute('value'));
+            filtered[0].currentTime = 0;
+            filtered[0].play();
 
-                if(keys_element.getAttribute('value') === audios_element.getAttribute('value')){            
-                    audios_element.currentTime = 0;
-                    audios_element.play();
-                }
-            }) 
         })
     })
 }
@@ -28,13 +25,17 @@ function addAudiosToClick(){
 function addAudiosToKey(){
     window.addEventListener("keydown",(event)=>{
 
-        audios.forEach((audios_element)=>{
+        /*audios.forEach((audios_element)=>{
 
             if(event.key.toLowerCase() === audios_element.getAttribute('value').toLowerCase()){
                 audios_element.currentTime = 0;
                 audios_element.play();
             }
-        })
+        })*/
+
+        const filtered = Array.from(audios).filter(audio => event.key.toLowerCase() === audio.getAttribute('value').toLowerCase());
+        filtered[0].currentTime = 0;
+        filtered[0].play();
 
         
     })
@@ -98,7 +99,13 @@ select.addEventListener("change", () => {
     select.addEventListener("change",addAudiosToKey());
 })
 
-changeText()
-addAudiosToClick();
-addAudiosToKey();
-addAnimation()
+function init(){
+
+    changeText();
+    addAudiosToClick();
+    addAudiosToKey();
+    addAnimation()
+
+}
+
+init();
