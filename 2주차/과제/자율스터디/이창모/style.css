@@ -1,0 +1,82 @@
+html {
+  font-size: 10px;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-size: cover;
+  background-image: none;
+}
+
+.sound-selector-wrapper{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.sound-selector{
+  width: 300px;
+  font-size: 20px;
+  padding: 5px 0 5px 0;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 .5rem black;
+  animation: tlqkf 100ms;
+}
+@keyframes tlqkf{
+  0% {
+    background: radial-gradient(circle at center, rgba( 255, 125 , 125, 0 ) 0%, #fff 0%, #fff 100%);
+  }
+  25% {
+    background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.3 ) 24%, #fff 25%, #fff 100%);
+  }
+  50% {
+    background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.5 ) 49%, #fff 50%, #fff 100%);
+  }
+  75% {
+    background: radial-gradient(circle at center, rgba( 255, 125, 125, 0.8 ) 74%, #fff 75%, #fff 100%);
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(circle at center, #f88 99%, #fff 100%, #fff 100%);
+  }
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+.keyType {
+  font-size: rem;
+  font-weight: bold;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}

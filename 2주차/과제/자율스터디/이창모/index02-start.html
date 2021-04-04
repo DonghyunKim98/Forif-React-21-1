@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sound of music</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="App.js" defer></script>
+</head>
+
+<body>
+  <div class="sound-selector-wrapper">
+    <select class="sound-selector">
+      <option value="nothing">---------</option>
+      <option value="drum">드럼</option>
+      <option value="piano">피아노</option>
+    </select>
+  </div>
+
+  <div class="keys">
+    <div value="A" class="key">
+      <div class="keyType">A</div>
+      <span class="sound"></span>
+    </div>
+    <div value="S" class="key">
+      <div class="keyType">S</div>
+      <span class="sound"></span>
+    </div>
+    <div value="D" class="key">
+      <div class="keyType">D</div>
+      <span class="sound"></span>
+    </div>
+    <div value="F" class="key">
+      <div class="keyType">F</div>
+      <span class="sound"></span>
+    </div>
+    <div value="G" class="key">
+      <div class="keyType">G</div>
+      <span class="sound"></span>
+    </div>
+    <div value="H" class="key">
+      <div class="keyType">H</div>
+      <span class="sound"></span>
+    </div>
+    <div value="J" class="key">
+      <div class="keyType">J</div>
+      <span class="sound"></span>
+    </div>
+    <div value="K" class="key">
+      <div class="keyType">K</div>
+      <span class="sound"></span>
+    </div>
+    <div value="L" class="key">
+      <div class="keyType">L</div>
+      <span class="sound"></span>
+    </div>
+  </div>
+
+  <!-- drum sound -->
+  <audio id="drum-soundA" value="A" src="../../../sounds/drum/clap.wav"></audio>
+  <audio id="drum-soundS" value="S" src="../../../sounds/drum/hihat.wav"></audio>
+  <audio id="drum-soundD" value="D" src="../../../sounds/drum/kick.wav"></audio>
+  <audio id="drum-soundF" value="F" src="../../../sounds/drum/openhat.wav"></audio>
+  <audio id="drum-soundG" value="G" src="../../../sounds/drum/boom.wav"></audio>
+  <audio id="drum-soundH" value="H" src="../../../sounds/drum/ride.wav"></audio>
+  <audio id="drum-soundJ" value="J" src="../../../sounds/drum/snare.wav"></audio>
+  <audio id="drum-soundK" value="K" src="../../../sounds/drum/tom.wav"></audio>
+  <audio id="drum-soundL" value="L" src="../../../sounds/drum/tink.wav"></audio>
+
+  <!-- piano sound-->
+  <audio id="piano-soundA" value="A" src="../../../sounds/piano/do.mp3"></audio>
+  <audio id="piano-soundS" value="S" src="../../../sounds/piano/re.mp3"></audio>
+  <audio id="piano-soundD" value="D" src="../../../sounds/piano/mi.mp3"></audio>
+  <audio id="piano-soundF" value="F" src="../../../sounds/piano/fa.mp3"></audio>
+  <audio id="piano-soundG" value="G" src="../../../sounds/piano/sol.mp3"></audio>
+  <audio id="piano-soundH" value="H" src="../../../sounds/piano/la.mp3"></audio>
+  <audio id="piano-soundJ" value="J" src="../../../sounds/piano/si.mp3"></audio>
+  <audio id="piano-soundK" value="K" src="../../../sounds/piano/highdo.mp3"></audio>
+  <audio id="piano-soundL" value="L" src="../../../sounds/piano/cord.wav"></audio>
+
+</body>
+
+</html>
