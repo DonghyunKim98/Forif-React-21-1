@@ -1,0 +1,70 @@
+html {
+  font-size: 10px;
+  background: url('sounds/background.jpg') bottom center;
+  background-size: cover;
+  background-color: rgba( 255, 255, 255, 0.5 )
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: .4rem solid rgb(97, 68, 5);
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 10rem;
+  text-align: center;
+  color: rgb(97, 56, 10);
+  background: rgb(253, 239, 209);
+  text-shadow: 0 0 .5rem rgb(248, 224, 160);
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #000000;
+  box-shadow: 0 0 1rem #000000;
+}
+
+.keyType {
+  font-size: rem;
+  font-weight: bold;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #243a01;
+}
+
+.header{
+  margin: 2rem 3rem;
+}
+
+#select{
+  width: 32rem;
+  height: 4rem;
+  font-size: 3rem;
+  text-align-last: center;
+  color:rgb(250, 244, 226);
+  background-color: rgb(77, 45, 9);
+  border-color: rgb(70, 41, 8) ;
+}
+
+#select:focus{
+  outline:none;
+}
