@@ -357,6 +357,8 @@ window.addEventListener('keydown', playSoundKeyDown);
         }
     		// User.age 를 호출하면 발생함
         get age(){
+            // under score는 아무런 역할을 하지 않는다고 지금은 간주해도 좋습니다.
+            // 따라서 아래의 코드는 return this.age; 와 동일합니다
             return this._age;
         }
     		// User.age= 24 등 필드에 어떤 값을 할당할려면 발생함
