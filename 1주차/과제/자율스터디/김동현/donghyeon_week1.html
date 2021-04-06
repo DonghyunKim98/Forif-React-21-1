@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donghyeon_week1Style.css">
+   
+</head>
+<body>
+    <div id="intro">
+        <div id="logo">
+            <img src="images/googleLogo.PNG" height="31px"/>
+        </div>
+       
+        <ul id="list">
+            <li> Browse Fonts</li>
+            <li> Icons</li>
+            <li> More</li>
+            <li>
+                <img src="images/theme.PNG" height="25px"/>
+            </li>
+            <li>
+                <img src="images/family.PNG" height="25px"/>
+            </li>
+        </ul>
+    </div>
+
+    <div id="searchArea">
+        <div id="search">
+            <img src="images/loupe.png" width="20px" height="20px">
+            <form action="">
+                <input id="fontSearch" type="text" placeholder="search" style="width: 230px; height: 50px; border: none;">
+            </form>
+        </div>
+        <div id="type">
+            <select name="" id="option">
+                <option value="Custom">Custom</option>
+                <option value="Sentence">Sentence</option>
+                <option value="Alphabet">Alphabet</option>
+                <option value="Paragraph">Paragraph</option>
+                <option value="Numerals">Numerals</option>
+            </select>
+
+            <form action="">
+                <input id="typeSome" type="text" placeholder="Type something" style="width: 370px; height: 50px; border: none;" oninput="TextChange(this)">
+            </form>
+            
+        </div>
+            
+        <div id="font">
+            <select name="" id="fontSize" onchange="FontChange(this)">
+                <option value="8">8</option>
+                <option value="12">12</option>
+                <option value="14" selected>14</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+                <option value="40">40</option>
+            </select>
+
+            <div id="seek-bar">
+                <div id="circle">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="start">
+            <img id="button" src="images/restart.png" width="18px">
+        </div>
+    </div>
+
+    <div id="menu">
+        <div id="categories">
+            <h5>Categories</h5>
+            <img src="images/arrow.png" alt="">
+        </div>
+        
+        <div id="language">
+            <h5>Language</h5>
+            <img src="images/arrow.png" alt="">
+        </div>
+
+        <div id="property">
+            <h5>Font properties</h5>
+            <img src="images/arrow.png" alt="">
+        </div>
+
+        <div id="font">
+            <input type="checkbox" id="show" width="10px">
+            <label for="show">Show only variable fonts</label>
+            <img src="images/mark.png">
+        </div>
+    </div>
+
+    <div id="families">
+        <div>
+            <div class="fontName">
+                <p class="name">Noto Sans KR</p>
+                <p class="style">6 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Google</p>
+            </div>
+
+            <div class="ex" style="font-family: sans;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="fontName">
+                <p class="name">Nanum Gothic</p>
+                <p class="style">3 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Sandoll</p>
+            </div>
+
+            <div class="ex" style="font-family: NGothic;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Nanum Myeonjo</p>
+                <p class="style">3 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Fontrix, Sandoll</p>
+            </div>
+
+            <div class="ex" style="font-family: myeongjo;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Gothic A1</p>
+                <p class="style">9 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Hanyang I&C Co</p>
+            </div>
+
+            <div class="ex" style="font-family: a1;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Nanum Pen Script</p>
+                <p class="style">1 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Sandoll</p>
+            </div>
+
+            <div class="ex" style="font-family: pen;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Nanum Gothic Coding</p>
+                <p class="style">2 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Sandoll</p>
+            </div>
+
+            <div class="ex" style="font-family: GothicCoding;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Do Hyeon</p>
+                <p class="style">1 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Woowaahan Brothers</p>
+            </div>
+
+            <div class="ex" style="font-family: dohyeon;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Black Han Sans</p>
+                <p class="style">1 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Zess Type</p>
+            </div>
+
+            <div class="ex" style="font-family: BHS;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+        <div>
+            <div class="fontName">
+                <p class="name">Nanum Brush Script</p>
+                <p class="style">1 styles</p>
+            </div>
+
+            <div class="produce">
+                <p>Sandoll</p>
+            </div>
+
+            <div class="ex" style="font-family: NBS;">
+                <p>그들의 장비와 기구는 모두 살아있다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="donghyeon_week1JS.js"></script>
+</html>
