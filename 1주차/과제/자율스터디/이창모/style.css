@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
+.upper-wrapper{
+    margin: 3%;
+}
+.title{
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+input{
+    width: 400px;
+}
+
+.below-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.font-wrapper{
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.penmanship{
+    font-size: 35px;
+}
+.Roboto{
+    font-family: "Roboto", sans-serif;
+}
+.NotoSansKR {
+    font-family: "Noto Sans KR", sans-serif;
+}
+.CormorantUnicase {
+    font-family: "Cormorant Unicase", serif;
+}
+.Recursive {
+    font-family: "Recursive", sans-serif;
+}
+.Raleway {
+    font-family: "Raleway", sans-serif;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+}
