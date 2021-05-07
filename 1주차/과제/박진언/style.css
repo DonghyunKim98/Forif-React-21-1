@@ -1,0 +1,98 @@
+.content{
+    width: 20rem;
+    height: 6rem;
+    margin: 20px 0;
+    border : 3px solid rgb(255, 157, 138);
+    background-color: rgb(255, 243, 241);
+    font-size: 30px;
+    color:rgb(90, 45, 36);
+    border-radius:5px;
+}
+.content:nth-child(2n){
+    border : 3px solid rgb(154, 173, 103);
+    background-color: rgb(238, 238, 238);
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.box1{
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.box2{
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+.box3{
+    font-family: 'Cute Font', cursive;
+}
+
+.box4{
+    font-family: 'Hi Melody', cursive;
+}
+
+.box5{
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+.box6{
+    font-family: 'Noto Serif KR', serif;
+}
+
+.box7{
+    font-family: 'Single Day', cursive;
+}
+
+.box8{
+    font-family: 'Yeon Sung', cursive;
+}
+
+input[type="text"]{
+    width:500px;
+    height: 25px;
+    font-size: 20px;
+    border-color:rgb(90, 45, 36);
+    border-radius: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+input[type="text"]:focus{
+    outline:none;
+    background-color:rgb(226, 215, 214);
+}
+
+
+input[type="button"]{
+    width:100px;
+    height: 33px;
+    font-size: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-color:rgb(226, 215, 214);
+    border-color:rgb(90, 45, 36);
+    color:rgb(90, 45, 36);
+}
+
+body{
+    background-color:rgb(250, 246, 246);
+}
+
+h1{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size:50px;
+    color:rgb(90, 45, 36);
+    text-align: center;
+}
+
+header{
+    text-align: center;
+}
+#form{
+    display:inline-block;
+}
+section{
+    margin-top: 50px;
+}
