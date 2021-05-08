@@ -201,7 +201,7 @@ class Clock {
         clockHand.style.transform = `rotate(${secondsDegrees}deg)`;
         return;
       }
-      if (clockHand.classList[1] === "min-hand") {
+      if (clockHand.classList[0] === "min-hand") {
         const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) - 90;
         clockHand.style.transform = `rotate(${minsDegrees}deg)`;
         return;
@@ -210,9 +210,6 @@ class Clock {
       const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) - 90;
       clockHand.style.transform = `rotate(${hourDegrees}deg)`;
     })
-  }
-  updateHandInterval() {
-    setInterval(this.updateClockHand(), 1000)
   }
 };
 
@@ -285,8 +282,7 @@ function init() {
   const handsName = [".second-hand", ".min-hand", ".hour-hand"];
   const hands = new Clock(handsName);
   hands.updateClockHand();
-  hands.updateHandInterval();
-
+  setInterval(()=>{hands.updateClockHand()},1000);
   // timer initialization
   const timer = new Timer();
   timer.initTimerSetting();
@@ -384,7 +380,7 @@ init();
 
 - 필요 없는 기능을 작성하지 말아라!
 - 필요하지 않는 기능 X, 사용하지 않는 기능 X , 지나치게 미래지향적 X
-- 깨긋하게 O , 변경이  쉽게 O, 유지보수 용이 O
+- 깨끗하게 O , 변경이  쉽게 O, 유지보수 용이 O
 
 ---
 - 4주차는 과제 진행되지 않습니다. 지금까지 한 과제들 복습을 쭉 해보시기 바랍니다 다음주부터 본격적인 React 수업 진행합니다.
