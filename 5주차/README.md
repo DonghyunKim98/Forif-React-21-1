@@ -433,7 +433,7 @@ useEffect(() => {
 function Sample() {
 	const btnRef = useRef();
 	const onClick=()=>{
-		btnRef.style.color="blue";
+		btnRef.current.style.color="blue"; // current 를 이용하여 DOM 에 접근 
 	};
 
 	return (
