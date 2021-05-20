@@ -419,3 +419,38 @@ useEffect(() => {
 ### 주의점
 
 - 여러개의 `useEffect` 가 써져있는 경우, 위에서 부터 실행됨.
+
+## useRef
+
+### 정의
+
+- 클래스형 컴포넌트에서 `React.createRef` 를 대체
+- React에서 DOM을 직접 컨트롤할때 사용함
+
+### 사용 방법
+
+```jsx
+function Sample() {
+	const btnRef = useRef();
+	const onClick=()=>{
+		btnRef.style.color="blue";
+	};
+
+	return (
+	<div>Ref 예제</div>
+	<button
+		onClick={onClick}
+    ref={btnRef}
+	/>
+	)
+}
+```
+
+## 5주차 과제
+
+- RoundTimer 제작
+    - 필수 구현사항
+        - + 버튼을 누르면 1씩 증가, - 버튼을 누르면 1씩 감소
+        - 60 이상 증가 X , 0 이하 감소 X
+        - start 버튼을 누르면 1초에 한번씩 숫자 감소 + 시계가 돌아감
+        - 버튼을 누르고 나서는 시작 버튼 비활성화
