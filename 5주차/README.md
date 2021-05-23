@@ -9,7 +9,7 @@
 - `root/public` 과 `root/src` 에 다음과 같은 파일들만 남기고 전부 삭제
 ![image](https://user-images.githubusercontent.com/60422588/119245379-ea565a80-bbb3-11eb-8f98-9ca91c56470b.png)
 - `root/public/index.html` 내용을 다음과 같이 수정
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +24,7 @@
 </html>
 ```
 - `root/public/index.js` 내용을 다음과 같이 수정
-```
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
