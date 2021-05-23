@@ -3,10 +3,43 @@
 - [https://ko.reactjs.org/docs/hello-world.html](https://ko.reactjs.org/docs/hello-world.html)
 - 헷갈리는 부분은 이 파일보다도 공식문서를 확인!!
 
-## ① React - CRA 를 이용하여 프로젝트 생성
+## ① React - CRA 를 이용하여 프로젝트 생성 및 쓸모없는 파일 삭제
 
 - 0주차 스터디 참고
+- `root/public` 과 `root/src` 에 다음과 같은 파일들만 남기고 전부 삭제
+![image](https://user-images.githubusercontent.com/60422588/119245379-ea565a80-bbb3-11eb-8f98-9ca91c56470b.png)
+- `root/public/index.html` 내용을 다음과 같이 수정
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+```
+- `root/public/index.js` 내용을 다음과 같이 수정
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App.jsx';
 
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+```
+- `App.js` -> `App.jsx` 로 수정
+- `App.css` 내용 비우기
 ## ② React - Component , JSX
 
 ### 컴포넌트를 표현하는 JSX
@@ -15,7 +48,8 @@
 - element의 끝에 마침 표시 **'/>'** 가 있어야 함
 - 개발자는 JSX만 작성, 리액트 엔진은 `React.createELement()` 를 이용해서 DOM을 생성
 - **JSX를 사용하기 위해서는 반드시 React 를 import 해야 함!**
-- jsx 를 사용하는 javascript 파일은 **.jsx** 로 명시하는 것이 좋음
+- JSX 를 사용하는 javascript 파일은 **.jsx** 로 명시하는 것이 좋음
+- JSX 를 사용하는 덩어리는 반드시 **소괄호() 로 묶어줘야 함**!!
 - JSX 예시
 
 ```jsx
@@ -25,11 +59,10 @@ import "./App.css";
 const App=()=> {
   return (
     <div className="title">
-	    Hello World!
+    	Hello World!
     </div>
   );
 }
-
 export default App;
 ```
 
@@ -50,8 +83,8 @@ export default App;
     // available 
     return(
     	<div>
-    		<div>Hello</div>
-    		<div>Wordl!</div>
+    	    <div>Hello</div>
+    	    <div>World!</div>
     	</div>	
     )
     ```
@@ -71,7 +104,7 @@ const App=()=> {
   return (
     <div>
       <Child/>
-			<Child/>
+      <Child/>
     </div>
   );
 }
@@ -84,9 +117,9 @@ export default App;
 import React from "react";
 
 function Child(){
-	return(
-		<div>자식 컴포넌트 입니다.</div>
-	)
+    return(
+        <div>자식 컴포넌트 입니다.</div>
+    );
 }
 ```
 
@@ -139,11 +172,11 @@ function Child(){
 
 ```jsx
 function App() {
-	return ({
-		<div className="body">
-			<MyComponenet name="message"/> // name이란 이름으로 message라는 문자열값을 전달
-		</div>
-	})
+    return (
+	<div className="body">
+	    <MyComponenet name="message"/> // name이란 이름으로 message라는 문자열값을 전달
+	</div>
+    );
 }
 ```
 
@@ -151,11 +184,11 @@ function App() {
 
 ```jsx
 function MyComponent(props){
-	name=props.name;
-	render(){
-		const name = this.props.name;
-		return <span>{name}</span>;
-	}
+    name=props.name;
+    const name = this.props.name;
+    return(
+	<span>{name}</span>;
+    );
 }
 ```
 
@@ -219,9 +252,8 @@ const [value, setValue] = useState(0);
     - `useState` 는 이전 `state` 값을 인자로 자동으로 받아오는 callback function을 인자로 넣을 수 있음.
         - 이를 함수형 업데이트라고 부름
 - **함수형 업데이트를 쓰는 이유 (중요)**
-    1. `useCallback` , `useMemo` **에서 성능 최적화 작업 
+    1. `useCallback` , `useMemo`  **에서 성능 최적화 작업**  -> _아직 몰라도 괜찮음_
     ⇒ 두번째 인자로 들어가는 dependency array의 요소를 줄일 수 있음**
-
         ```jsx
         // state의 값이 바뀐다고, useCallback이나 useMemo를 다시 할당할 이유가 없음.
         // 그러나 아래와 같이 함수형 업데이트를 사용하지 않으면, 반드시 재할당해야함 
@@ -251,7 +283,7 @@ const [value, setValue] = useState(0);
         }, []); // 더이상 user 관련하여 재할당하지 않음
         ```
 
-    2. **이전 state 값을 가져오는 걸** **항상 보장할 수 있음**
+    2. **이전 state 값을 가져오는 걸 항상 보장**할 수 있음
 
         ```jsx
         // 아래와 같이 아예 다른 state값을 할당해야 한다면 
@@ -454,3 +486,7 @@ function Sample() {
         - 60 이상 증가 X , 0 이하 감소 X
         - start 버튼을 누르면 1초에 한번씩 숫자 감소 + 시계가 돌아감
         - 버튼을 누르고 나서는 시작 버튼 비활성화
+- ![image](https://user-images.githubusercontent.com/60422588/119245564-38b82900-bbb5-11eb-93b4-adb43f127952.png)
+- ![image](https://user-images.githubusercontent.com/60422588/119245571-440b5480-bbb5-11eb-9b69-058815b461b5.png)
+
+
