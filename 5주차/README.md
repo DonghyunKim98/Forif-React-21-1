@@ -65,6 +65,9 @@ const App=()=> {
 }
 export default App;
 ```
+### JSX 를 사용할 때의 주의점
+- JSX 를 사용하는 덩어리는 반드시 **소괄호() 로 묶어줘야 함**!!
+- JSX 를 사용하는 파일은 반드시 **`import React from 'react'`** 를 할 것
 
 ### JSX 와 HTML 과의 차이점
 
@@ -218,6 +221,11 @@ function MyComponent(props){
 - 위에서 말했듯이, Hook은 브라우저의 **메모리 자원**을 쓴다.
 - 따라서, **함부로 남발**했다가는 오히려 전체적인 성능 저하를 불러올 수 있다.
 - Hook의 성능 최적화는 이 곳에서 다룬다.
+
+### 전체 규칙
+- [공식사이트](https://ko.reactjs.org/docs/hooks-rules.html) 참고
+- hook 은 **함수의 최상단에 써야 한다**는 것이 주된 요지!
+
 
 ## useState
 
