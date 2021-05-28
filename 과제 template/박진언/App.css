@@ -1,0 +1,135 @@
+html {
+    font-family: 'helvetica neue';
+    text-align: center;
+}
+
+
+.index{
+    padding-top: 2.5rem;
+    font-size:2rem;
+}
+
+.clockContent{
+    
+    display: flex;
+    flex-direction: column;
+    background: #dad8d8;
+    background-size: cover;
+    min-height: 100vh;
+}
+.clock {
+    width: 15rem;
+    height: 15rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+}
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); 
+}
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand{
+    height : 2px;
+    width : 60%;
+}
+
+.start{
+    padding: 2rem;
+}
+
+.startButton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    color: black;
+    border-radius: 2rem;
+}
+  
+.startButton:hover {
+    background-color: #555555;
+    color: white;
+}
+
+.buttonPart {
+    display: flex;
+    flex-direction: column;
+}
+
+.plusMinus{
+    display: flex;
+    justify-content: center;
+}
+
+.plus{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: black;
+    border-radius: 0.2rem;
+}
+
+.plus:hover {
+    background-color: #ffa8a8;
+    color: white;
+}
+
+.minus{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    color: black;
+    border-radius: 0.2rem;
+}
+
+.minus:hover {
+    background-color: #96befa;
+    color: white;
+}
+
+.time{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    color: black;
+}
