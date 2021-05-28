@@ -1,0 +1,54 @@
+.title{
+    text-align: center;
+}
+header{
+    text-align: center;
+    margin-bottom:20px;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.content{
+    width: 20rem;
+    height: 8rem;
+    border : 1px solid gray;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+
+    flex: 0 1 40%;
+
+    font-size:24pt;
+    text-align: center;
+}
+
+.fontItem1{
+    font-family: 'Noto Serif KR', serif;
+}
+.fontItem2{
+    font-family: 'Black Han Sans', sans-serif;
+}
+.fontItem3{
+    font-family: 'Poor Story', cursive;
+}
+.fontItem4{
+    font-family: 'Song Myung', serif;
+}
+.fontItem5{
+    font-family: 'Do Hyeon', sans-serif;
+}
+.fontItem6{
+    font-family: 'East Sea Dokdo', cursive;
+}
+.fontItem7{
+    font-family: 'Gugi', cursive;
+}
+.fontItem8{
+    font-family: 'Yeon Sung', cursive;
+}
+
+
