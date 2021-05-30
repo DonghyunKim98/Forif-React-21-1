@@ -323,11 +323,11 @@ function Columns() {
 
 ```jsx
 function App(){
-	return (
-		<div className="body">
-			<MyComponenet name="message"/> // name이란 이름으로 message라는 문자열값을 전달
-		</div>
-	)
+    return (
+        <div className="body">
+        	<MyComponenet name="message"/> // name이란 이름으로 message라는 문자열값을 전달
+	</div>
+    );
 }
 ```
 
@@ -336,10 +336,10 @@ function App(){
 ```jsx
 
 function MyComponent(props){
-	const name = props.name;
-	return (
-		<span>{name}</span>;
-	)
+    const name = props.name;
+    return (
+	<span>{name}</span>;
+    )
 }
 ```
 
@@ -348,21 +348,26 @@ function MyComponent(props){
 ```jsx
 // 방식 ①
 function MyComponent(props){
-	const {name} = props;
-	return (<span>{name}</span>;
-	)
+    const {name} = props;
+    return (<span>{name}</span>);
 }
 
 // 방식 ② 
 function MyComponent(props: {name}){
-	return (<span>{name}</span>);
+    return (<span>{name}</span>);
+}
+
+// 방식 3
+function MyComponeent({name})(
+    return (<span>{name}</span>);
 }
 ```
 
 ### Property - 자료형 선언
 
-- `**prop-types**` 를 이용하기
+- **`prop-types`** 를 이용하기
 - `import Proptypes from 'prop-types';` 를 명시해야 함
+- installation : `npm install prop-types`
 
 ```jsx
 import React from 'react';
@@ -393,23 +398,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ChildComponent (props) {
-	const {
-		boolValue,
-	  numValue,
-		arrayValue,
-		objValue,
-		nodeValue,
-		funcValue,
-} = props;
-	return (
-	<div>
-		<span>불리언값:{boolValue}</span>
-		<span>숫자값:{numValue}</span>
-		<span>배열값:{arrayValue}</span>
-		<span>객체값:{String(objValue)}</span>
-		<span>노드값:{nodeValue}</span>
-		 <span>함수값:{String(funcValue)}</span>
-</div>);
+    const {
+    	boolValue,
+	numValue,
+	arrayValue,
+	objValue,
+	nodeValue,
+	funcValue,
+	} = props;
+    return (
+    <div>
+	<span>불리언값:{boolValue}</span>
+	<span>숫자값:{numValue}</span>
+	<span>배열값:{arrayValue}</span>
+	<span>객체값:{String(objValue)}</span>
+	<span>노드값:{nodeValue}</span>
+	<span>함수값:{String(funcValue)}</span>
+    </div>);
     }
 }
 
@@ -537,6 +542,60 @@ Counter2.propTypes = {
 
 export default Counter2;
 ```
+##  React - ④ 조건부 랜더링
+
+- JSX 안과 밖에서 하는 조건부 랜더링을 하는 방식이 다르다. -> JSX 안에서의 js 에서는 `if/else` 를 사용하지 못 하기 때문.
+
+### 방식 1) JSX 밖 : 조건식을 이용하여 분기
+- JSX 를 들어가기전에 애초에 분기를 하는 것이다.
+- if , else , switch 다양하게 쓸 수 있다는 장점이 있지만, JSX 에서 쓰지 않으므로 JSX 만 보았을때 한 눈에 분기되는 점을 알아보기 어렵다는 단점이 있다.
+```jsx
+function MyComponent({isMale}){
+    let text = '';
+    if(isMale) text="남성"
+    else(isMale) text="여성"
+    return(
+    	<div>
+	    {text}
+	</div>
+    )
+}
+
+```
+### 방식 2) JSX 안 : 삼항 연산자
+- 조건식이 참이면 `?` 값이, 거짓이면 `:` 값이 렌더링
+```
+function MyComponent({isMale}){
+    return(
+    	<div>
+	{ isMale 
+	  ? (<span>남성</span>)
+	  : (<sapn>여성</span>)
+	}
+	</div>
+	
+    )
+
+}
+```
+### 방식 3) JSX 안 : `&&`
+- 조건식이 참이면 `&&` 뒤를 랜더링, 아니면 랜더링하지 않음
+```
+function MyComponent({isMale})
+    return(
+     <div>
+     { isMale 
+       && (
+        <span>남성</span>
+       )
+    )
+}
+```
+
+### 방식 4) JSX 안 : `||`
+- 조건식이 참이면 조건식을 랜더링, 아니면 || 뒤를 랜더링
+- `const A ? A : B` 는 `const A || B` 와 같은 구문
+
 
 ## 6주차 스터디 과제
 
@@ -547,3 +606,7 @@ export default Counter2;
     - 선택
         - 전체 todo 개수 보여주기
         - 하나의 todo 개수 자체를 늘리기
+ ![image](https://user-images.githubusercontent.com/60422588/120089199-f5b90100-c132-11eb-840e-4108e40a58a2.png)
+ ![image](https://user-images.githubusercontent.com/60422588/120089205-023d5980-c133-11eb-8d47-f6be059b7edc.png)
+
+
